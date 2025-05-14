@@ -18,3 +18,18 @@ students.find((item) => {
  console.log('Prommossi:', passedStudents);
  console.log('1° Bocciato:', failed);
 
+/* reduce&sort */
+const expenses = [25, 57, 12, 33, 9, 28];
+const words = ["banana","apple","cherry","dates"];
+
+ const totalexpense = expenses.reduce((acc, curr) => {
+    return acc + curr
+}, 0);
+
+const alpha = words.sort((a, b) => {
+    return a.localeCompare(b);
+});
+console.log(totalexpense);
+console.log(alpha);
+
+/*  */
