@@ -48,7 +48,7 @@ return{
 }
 
 /* automobile */
- class automobile {
+ class Automobile {
     marca = ""
     modello = ""
     anno = 0
@@ -62,12 +62,26 @@ return{
     descrizione(){
        return "Hai scelto : ${this.marca} ${this.modello} anno: ${this.anno} "
     }
-    aggiungiChilometri(km){
+    aggiungiChilometri(){
       this.chilometraggio += 1;  
     }
     mostraChilometraggio(){
-      console.log(this.chilometraggio);
+      console.log(this.chilometraggio + "km");
     }
-};
+}
+
+class Electtrica extends Automobile {
+    autonomia = 0;
+    constructor (marca, modello, anno, autonomia){
+        super(marca, modello, anno);
+        this.autonomia = autonomia ;
+    }
+    descrizione(){
+        return "Hai scelto : ${this.marca} ${this.modello} anno: ${this.anno} e puoi percorrere fino a ${this.autonomia}. "
+    }
+    ricarica(){
+        this.autonomia += 1;
+    }
+}
 
 
