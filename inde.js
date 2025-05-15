@@ -32,4 +32,17 @@ const alpha = words.sort((a, b) => {
 console.log(totalexpense);
 console.log(alpha);
 
-/*  */
+/* counter */
+function createCounter(array) {
+let count = o ;
+return{
+    increment: function(){
+        count += 1;
+        return count;
+    },
+    decrement: function(){
+        count -= 1;
+        return count ;
+    }
+  }
+}
