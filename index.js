@@ -49,5 +49,25 @@ return{
 
 /* automobile */
  class automobile {
-    
- }
+    marca = ""
+    modello = ""
+    anno = 0
+    chilometraggio = 0;
+    constructor (marca, modello, anno) {
+        this.marca = marca ;
+        this.modello = modello ;
+        this.anno = anno ;
+        this.chilometraggio = chilometraggio;
+    }
+    descrizione(){
+       return "Hai scelto : ${this.marca} ${this.modello} anno: ${this.anno} "
+    }
+    aggiungiChilometri(km){
+      this.chilometraggio += 1;  
+    }
+    mostraChilometraggio(){
+      console.log(this.chilometraggio);
+    }
+};
+
+
