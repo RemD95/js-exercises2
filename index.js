@@ -68,6 +68,14 @@ return{
     mostraChilometraggio(){
       console.log(this.chilometraggio + "km");
     }
+    #calcolaEtà(){
+      const annoCorrente = new Date().getFullYear();
+      return annoCorrente - this.anno;
+    }
+    mostraEtà(){
+      const età = this.#calcolaEtà();
+      console.log('Questa ${this.marca} ha ${età} anni')
+    }
 }
 
 class Electtrica extends Automobile {
@@ -86,3 +94,5 @@ class Electtrica extends Automobile {
 
 
 Automobile.prototype.saluto = "Ciao, Salut , Hello, Servus."
+
+/* metodo privato */
