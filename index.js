@@ -90,6 +90,9 @@ return{
         console.log("Il metodo verificaKm è stato chiamato ${this.#contatoreChiamate} volte.")
         return this.#contatoreChiamate ;
     }
+    #incrementaContatore(){
+      this.#contatoreChiamate++;  
+    }
 }
 
 class Electtrica extends Automobile {
@@ -114,4 +117,7 @@ Automobile.prototype.saluto = "Ciao, Salut , Hello, Servus."
 /* metodo porotetto */
 
 /* Contatore Metodo */
+
+/* Incrementa contatore */
+
 
