@@ -76,6 +76,11 @@ return{
       const età = this.#calcolaEtà();
       console.log('Questa ${this.marca} ha ${età} anni')
     }
+    _controllaChilometri(){
+        if(chilometraggio > 100000){
+            return console.log("Quest'auto supera i 100.000km !")
+        }else{"quest'auto ha un chilometraggio nella norma !"}
+    }
 }
 
 class Electtrica extends Automobile {
@@ -96,3 +101,4 @@ class Electtrica extends Automobile {
 Automobile.prototype.saluto = "Ciao, Salut , Hello, Servus."
 
 /* metodo privato */
+/* metodo porotetto */
