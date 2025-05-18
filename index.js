@@ -85,3 +85,4 @@ class Electtrica extends Automobile {
 }
 
 
+Automobile.prototype.saluto = "Ciao, Salut , Hello, Servus."
