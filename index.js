@@ -53,11 +53,13 @@ return{
     modello = ""
     anno = 0
     chilometraggio = 0;
+    #contatoreChiamate = 0;
     constructor (marca, modello, anno) {
         this.marca = marca ;
         this.modello = modello ;
         this.anno = anno ;
         this.chilometraggio = chilometraggio;
+        this.#contatoreChiamate = contatoreChiamate; 
     }
     descrizione(){
        return "Hai scelto : ${this.marca} ${this.modello} anno: ${this.anno} "
@@ -81,6 +83,13 @@ return{
             return console.log("Quest'auto supera i 100.000km !")
         }else{"quest'auto ha un chilometraggio nella norma !"}
     }
+    verificaKm(){
+        this.#contatoreChiamate++;
+    }
+    numeroChiamate(){
+        console.log("Il metodo verificaKm è stato chiamato ${this.#contatoreChiamate} volte.")
+        return this.#contatoreChiamate ;
+    }
 }
 
 class Electtrica extends Automobile {
@@ -101,4 +110,8 @@ class Electtrica extends Automobile {
 Automobile.prototype.saluto = "Ciao, Salut , Hello, Servus."
 
 /* metodo privato */
+
 /* metodo porotetto */
+
+/* Contatore Metodo */
+
