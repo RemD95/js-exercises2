@@ -83,10 +83,10 @@ return{
             return console.log("Quest'auto supera i 100.000km !")
         }else{"quest'auto ha un chilometraggio nella norma !"}
     }
-    verificaKm(){
-        this.#contatoreChiamate++;
+    aggiungiKm(km){
+        this.#incrementaContatore;
     }
-    numeroChiamate(){
+    mostraContatoreChiamate(){
         console.log("Il metodo verificaKm è stato chiamato ${this.#contatoreChiamate} volte.")
         return this.#contatoreChiamate ;
     }
