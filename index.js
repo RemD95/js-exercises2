@@ -93,6 +93,14 @@ return{
     #incrementaContatore(){
       this.#contatoreChiamate++;  
     }
+    get chilometraggio(){
+        return this.mostraChilometraggio;
+    }
+    set chilometraggio(newKm){
+        if(newKm >= this.chilometraggio){
+            this.chilometraggio = newKm;
+        }
+    }
 }
 
 class Electtrica extends Automobile {
