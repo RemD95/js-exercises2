@@ -128,4 +128,17 @@ Automobile.prototype.saluto = "Ciao, Salut , Hello, Servus."
 
 /* Incrementa contatore */
 
+/* Camion */
+
+class Camion extends Automobile{
+    caricoMassimo = 0 ;
+    constructor(marca, modello, anno, caricoMassimo){
+        super(marca, modello, anno)
+        this.caricoMassimo = caricoMassimo;
+    }
+    descrizione(){
+       return "Hai scelto : ${this.marca} ${this.modello} anno: ${this.anno} portata masssima: ${thid.caricoMassimo} "
+        return ""
+    }
+}
 
