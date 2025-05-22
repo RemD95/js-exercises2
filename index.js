@@ -101,6 +101,13 @@ return{
             this.chilometraggio = newKm;
         }
     }
+    static verificaIstanza(obj, classe){
+        if(obj instanceof Automobile){
+            document.write("true")
+        }else{
+            document.write("false")
+        }
+    }
 }
 
 class Electtrica extends Automobile {
@@ -142,3 +149,19 @@ class Camion extends Automobile{
     }
 }
 
+/* instance of */
+
+let auto1 = new Automobile("Fiat", "punto", 1000);
+let camion1 = new Camion("iveco", "iveco", 0, 5000);
+
+if(auto1 instanceof Automobile){
+    document.write("true")
+}else{document.write("false")
+
+}
+
+if( camion1 instanceof Camion){
+    document.write("true")
+}else{
+    document.write("false")
+}
