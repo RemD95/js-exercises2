@@ -29,7 +29,7 @@ const person = {
     età: 19,
     occupazione: "studente"
 };
-let {nome: name, cognome: surname} = person;
+let { nome: name, cognome: surname } = person;
 console.log(name, surname);
 
 /*-------------------------*/
@@ -73,21 +73,36 @@ const person3 = {
     nome: "franco",
     cognome: "alberto",
 };
-const città = {...person3, città: "roma"};
+const città = { ...person3, città: "roma" };
 console.log(person3);
 console.log(città);
 /*-------------------------*/
 
-/*  */
+/* DESTRUCTURING ARRAY CON REST OPERATOR */
+let [p1] = numbers4;
+let [, p2] = numbers4;
+let [, , ...restanti] = numbers4;
 
-
-
+console.log(p1);
+console.log(p2);
+console.log(restanti);
 /*-------------------------*/
-/*  */
 
-
-
+/* DESTRUCTURING OGGETTO CON REST OPERATOR */
+const person4 = {
+    nome1: "mario",
+    cognome1: "rossi",
+    età1: 19,
+    occupazione1: "studente"
+};
+let { nome1 } = person4;
+let { cognome1 } = person4;
+let { ...altriDati } = person4;
+console.log(nome1);
+console.log(cognome1);
+console.log(altriDati);
 /*-------------------------*/
+
 /*  */
 
 
@@ -105,10 +120,10 @@ console.log(città);
 /*-------------------------*/
 /* spread operator */
 const numb = [1, 2, 3, 4, 5];
- 
+
 const newNumbers = [...numb];
-  
- newnumbers.push(200) ;
+
+newnumbers.push(200);
 
 
 /*-------------------------*/
