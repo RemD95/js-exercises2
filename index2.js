@@ -59,9 +59,13 @@ console.log(numbers2);
 console.log(newNumbers2);
 
 /*-------------------------*/
-/*  */
+/* UNIONE DI DUE ARRAY */
+const numbers3 = [0, 1, 2, 3, 4, 5];
+const numbers4 = [6, 7, 8, 9, 10];
+const fullKey = [...numbers3];
 
-
+fullKey.push(numbers4);
+console.log(fullKey);
 
 /*-------------------------*/
 /*  */
