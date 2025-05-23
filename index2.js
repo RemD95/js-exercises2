@@ -29,13 +29,13 @@ const person = {
     età: 19 ,
     occupazione: "studente"    
 };
- let {nome, cognome} = person ;
- console.log(nome, cognome);
+ let {name, surname} = person ;
+ console.log(name, surname);
 
 /*-------------------------*/
-/*  */
+/* destructuring con nomi di variabili diverse */
 
-
+//modificato ex precedente
 
 /*-------------------------*/
 /*  */
