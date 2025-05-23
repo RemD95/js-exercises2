@@ -68,11 +68,16 @@ fullKey.push(numbers4);
 console.log(fullKey);
 
 /*-------------------------*/
-/*  */
-
-
-
+/* COPIA DI UN OGGETTO CON PROPIETà AGGIUNTIVE */
+const person3 = {
+    nome: "franco",
+    cognome: "alberto",
+};
+const città = {...person3, città: "roma"};
+console.log(person3);
+console.log(città);
 /*-------------------------*/
+
 /*  */
 
 
