@@ -11,8 +11,13 @@ console.log(pos3);
 
 //modificato ex precedente
 /*-------------------------*/
-/*  */
+/* destructuring con valori predefiniti */
 
+let numbers1 = [0, 1, 2];
+
+let [val1, val2, val3, val4 = 3, val5 = 4] = numbers1;
+
+console.log(val1, val2, val3, val4, val5);
 
 
 /*-------------------------*/
