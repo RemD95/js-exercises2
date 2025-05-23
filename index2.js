@@ -29,7 +29,7 @@ const person = {
     età: 19,
     occupazione: "studente"
 };
-let { name, surname } = person;
+let {nome: name, cognome: surname} = person;
 console.log(name, surname);
 
 /*-------------------------*/
