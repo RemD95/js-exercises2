@@ -24,13 +24,13 @@ console.log(val1, val2, val3, val4, val5);
 /* estrazione propietà di base  */
 
 const person = {
-    nome: "mario" ,
-    cognome: "rossi" ,
-    età: 19 ,
-    occupazione: "studente"    
+    nome: "mario",
+    cognome: "rossi",
+    età: 19,
+    occupazione: "studente"
 };
- let {name, surname} = person ;
- console.log(name, surname);
+let { name, surname } = person;
+console.log(name, surname);
 
 /*-------------------------*/
 /* destructuring con nomi di variabili diverse */
@@ -38,9 +38,14 @@ const person = {
 //modificato ex precedente
 
 /*-------------------------*/
-/*  */
+/* destructuring con valori predefiniti 2 */
 
-
+const person2 = {
+    nome: "daniele",
+    cognome: "grandi",
+};
+let { nome, cognome, età = "N.S.", occupazione = "N.S." } = person2;
+console.log(nome, cognome, età, occupazione);
 
 /*-------------------------*/
 /*  */
