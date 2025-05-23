@@ -48,19 +48,15 @@ let { nome, cognome, età = "N.S.", occupazione = "N.S." } = person2;
 console.log(nome, cognome, età, occupazione);
 
 /*-------------------------*/
-/*  */
+/* spread operator */
 
+const numbers2 = [0, 1, 2, 3, 4, 5];
 
+const newNumbers2 = [...numbers2];
 
-/*-------------------------*/
-/*  */
-
-
-
-/*-------------------------*/
-/*  */
-
-
+newNumbers2.push(6, 7, 8, 9);
+console.log(numbers2);
+console.log(newNumbers2);
 
 /*-------------------------*/
 /*  */
@@ -90,6 +86,20 @@ console.log(nome, cognome, età, occupazione);
 /*-------------------------*/
 /*  */
 
+
+
+/*-------------------------*/
+/*  */
+
+
+
+/*-------------------------*/
+/* spread operator */
+const numb = [1, 2, 3, 4, 5];
+ 
+const newNumbers = [...numb];
+  
+ newnumbers.push(200) ;
 
 
 /*-------------------------*/
