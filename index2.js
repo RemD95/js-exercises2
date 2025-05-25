@@ -107,8 +107,8 @@ console.log(altriDati);
 const object = {
     color: "blue",
     shape: "squared",
-}
-const objJson = JSON.stringify(object)
+};
+const objJson = JSON.stringify(object);
 console.log("oggetto modifcato con Json:" + objJson);
 /*-------------------------*/
 
@@ -118,19 +118,44 @@ const oggettoReale = JSON.parse(oggettoJson);
 
 console.log(oggettoReale);
 /*-------------------------*/
-/*  */
+/* MANIPOLAZIONE DI DATI JSON */
+const group1Json = '["student1 = Jeremy, student2 = James, student3 = Richard"]';
+const group1Reale = JSON.parse(group1Json);
 
+console.log(group1Reale);
 
-
+const group1 = [
+    student1 = Jeremy,
+    student2 = James,
+    student3 = Richard,
+    student4 = Stig
+];
+const group1Json2 = JSON.parse(group1);
+console.log(group1Json2);
 /*-------------------------*/
+
+/*  */
+/*-------------------------*/
+/*  */
+/*-------------------------*/
+/*  */
+/*-------------------------*/
+/*  */
+/*-------------------------*/
+/*  */
+/*-------------------------*/
+/*  */
+/*-------------------------*/
+
 /* spread operator */
-const numb = [1, 2, 3, 4, 5];
+/*const numb = [1, 2, 3, 4, 5];
 
 const newNumbers = [...numb];
 
-newnumbers.push(200);
-
-
+newnumbers.push(200);*/
 /*-------------------------*/
+
+
+
 
 
