@@ -109,13 +109,14 @@ const object = {
     shape: "squared",
 }
 const objJson = JSON.stringify(object)
-console.log("oggetto modifcato con Json:"+ objJson);
+console.log("oggetto modifcato con Json:" + objJson);
 /*-------------------------*/
 
-/*  */
+/* COVNERSIONE DI UNA STRINGA JSON IN UN OGGETTO */
+const oggettoJson = "{'color: red, shape: triangular'}"
+const oggettoReale = JSON.parse(oggettoJson);
 
-
-
+console.log(oggettoReale);
 /*-------------------------*/
 /*  */
 
