@@ -103,11 +103,15 @@ console.log(cognome1);
 console.log(altriDati);
 /*-------------------------*/
 
-/*  */
-
-
-
+/* CONVERSIONE DI UN OGGETTO IN UNA STRINGA JSON */
+const object = {
+    color: "blue",
+    shape: "squared",
+}
+const objJson = JSON.stringify(object)
+console.log("oggetto modifcato con Json:"+ objJson);
 /*-------------------------*/
+
 /*  */
 
 
