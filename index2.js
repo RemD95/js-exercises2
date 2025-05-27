@@ -142,7 +142,12 @@ const nomeCompleto = `${nome5} ${cognome5}`;
 console.log(nomeCompleto);
 
 /*-------------------------*/
-/*  */
+
+/* STRINGA MULTILINEA CON TEMPLATE LITERALS */
+const età5 = 52;
+const città5 = "roma";
+
+const infoGenerali = `Nome:${nome5} Cognome:${cognome5} Età:${età5} Città:${città5}`
 /*-------------------------*/
 /*  */
 /*-------------------------*/
