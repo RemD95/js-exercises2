@@ -134,7 +134,13 @@ const group1Json2 = JSON.parse(group1);
 console.log(group1Json2);
 /*-------------------------*/
 
-/*  */
+/* STRINGA SEMPLICE CON TEMPLATE LITERALS */
+const nome5 = "mario";
+const cognome5 = "rossi";
+
+const nomeCompleto = `${nome5} ${cognome5}`;
+console.log(nomeCompleto);
+
 /*-------------------------*/
 /*  */
 /*-------------------------*/
