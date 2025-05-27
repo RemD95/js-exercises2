@@ -95,9 +95,7 @@ const person4 = {
     età1: 19,
     occupazione1: "studente"
 };
-let { nome1 } = person4;
-let { cognome1 } = person4;
-let { ...altriDati } = person4;
+let { nome1, cognome1, ...altriDati} = person4;
 console.log(nome1);
 console.log(cognome1);
 console.log(altriDati);
@@ -156,6 +154,7 @@ const infoGenerali = `Nome:${nome5} Cognome:${cognome5} Età:${età5} Città:${c
 /*  */
 /*-------------------------*/
 /*  */
+
 /*-------------------------*/
 
 /* spread operator */
