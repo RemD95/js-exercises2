@@ -111,25 +111,54 @@ console.log("oggetto modifcato con Json:" + objJson);
 /*-------------------------*/
 
 /* COVNERSIONE DI UNA STRINGA JSON IN UN OGGETTO */
-const oggettoJson = "{'color: red, shape: triangular'}"
+const oggettoJson = "{'color': 'red', 'shape': 'triangular'}"
 const oggettoReale = JSON.parse(oggettoJson);
 
 console.log(oggettoReale);
 /*-------------------------*/
 /* MANIPOLAZIONE DI DATI JSON */
-const group1Json = '["student1 = Jeremy, student2 = James, student3 = Richard"]';
+const group1Json = [
+  {
+    "id": 1,
+    "nome": "Giovanni",
+    "email": "giovanni@example.com",
+    "eta": 28,
+    "attivo": true
+  },
+  {
+    "id": 2,
+    "nome": "Maria",
+    "email": "maria@example.com",
+    "eta": 34,
+    "attivo": false
+  },
+  {
+    "id": 3,
+    "nome": "Luca",
+    "email": "luca@example.com",
+    "eta": 22,
+    "attivo": true
+  },
+  {
+    "id": 4,
+    "nome": "Sara",
+    "email": "sara@example.com",
+    "eta": 25,
+    "attivo": true
+  }
+];
 const group1Reale = JSON.parse(group1Json);
 
 console.log(group1Reale);
 
-const group1 = [
-    student1 = Jeremy,
-    student2 = James,
-    student3 = Richard,
-    student4 = Stig
-];
-const group1Json2 = JSON.parse(group1);
-console.log(group1Json2);
+group1Reale.push({
+    id: 5,
+    nome: "remo",
+    email: "remo@example.com",
+    età: 29,
+    attivo: false,
+})
+const group1Json2 = JSON.stringify(group1Reale);
 /*-------------------------*/
 
 /* STRINGA SEMPLICE CON TEMPLATE LITERALS */
