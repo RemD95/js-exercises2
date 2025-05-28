@@ -209,7 +209,16 @@ console.log(array);
 console.log(oggetto);
 
 /*-------------------------*/
-/*  */
+/* utilizzare console.log e console.warn */
+const errorX = 5;
+const errorY = 9;
+
+  if (errorX === 5) {
+    console.error("Errore:valore non valido")
+  }if(errorX !== 5) {
+    console.warn("everything is fine")
+  }
+
 /*-------------------------*/
 /*  */
 
