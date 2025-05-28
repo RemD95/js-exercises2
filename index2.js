@@ -193,7 +193,21 @@ console.log(formatString);
 
 /*-------------------------*/
 
-/*  */
+/* utilizzare console.log */
+const numero = 65;
+const stringa = "V";
+const array = ["#motorbike", "oldschool"];
+const oggetto = {
+  marca: "Moto-Guzzi",
+  modello: "V65",
+  anno: 1985
+};
+
+console.log(numero);
+console.log(stringa);
+console.log(array);
+console.log(oggetto);
+
 /*-------------------------*/
 /*  */
 /*-------------------------*/
