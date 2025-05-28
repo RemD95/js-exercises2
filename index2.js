@@ -220,7 +220,20 @@ const errorY = 9;
   }
 
 /*-------------------------*/
-/*  */
+/* utilizzare cnsole.table console.group */
+console.table([
+  {lunghezza: 12},
+  {altezza: 12},
+  {profondità:12}
+]);
+console.log("franco");
+console.group();
+console.log("alberto");
+console.group();
+console.log("giovanni");
+console.group();
+console.log("mario");
+console.groupEnd;
 
 /*-------------------------*/
 
