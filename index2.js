@@ -24,10 +24,10 @@ console.log(val1, val2, val3, val4, val5);
 /* estrazione propietà di base  */
 
 const person = {
-    nome: "mario",
-    cognome: "rossi",
-    età: 19,
-    occupazione: "studente"
+  nome: "mario",
+  cognome: "rossi",
+  età: 19,
+  occupazione: "studente"
 };
 let { nome: name, cognome: surname } = person;
 console.log(name, surname);
@@ -41,8 +41,8 @@ console.log(name, surname);
 /* destructuring con valori predefiniti 2 */
 
 const person2 = {
-    nome: "daniele",
-    cognome: "grandi",
+  nome: "daniele",
+  cognome: "grandi",
 };
 let { nome, cognome, età = "N.S.", occupazione = "N.S." } = person2;
 console.log(nome, cognome, età, occupazione);
@@ -70,8 +70,8 @@ console.log(fullKey);
 /*-------------------------*/
 /* COPIA DI UN OGGETTO CON PROPIETà AGGIUNTIVE */
 const person3 = {
-    nome: "franco",
-    cognome: "alberto",
+  nome: "franco",
+  cognome: "alberto",
 };
 const città = { ...person3, città: "roma" };
 console.log(person3);
@@ -90,12 +90,12 @@ console.log(restanti);
 
 /* DESTRUCTURING OGGETTO CON REST OPERATOR */
 const person4 = {
-    nome1: "mario",
-    cognome1: "rossi",
-    età1: 19,
-    occupazione1: "studente"
+  nome1: "mario",
+  cognome1: "rossi",
+  età1: 19,
+  occupazione1: "studente"
 };
-let { nome1, cognome1, ...altriDati} = person4;
+let { nome1, cognome1, ...altriDati } = person4;
 console.log(nome1);
 console.log(cognome1);
 console.log(altriDati);
@@ -103,8 +103,8 @@ console.log(altriDati);
 
 /* CONVERSIONE DI UN OGGETTO IN UNA STRINGA JSON */
 const object = {
-    color: "blue",
-    shape: "squared",
+  color: "blue",
+  shape: "squared",
 };
 const objJson = JSON.stringify(object);
 console.log("oggetto modifcato con Json:" + objJson);
@@ -152,11 +152,11 @@ const group1Reale = JSON.parse(group1Json);
 console.log(group1Reale);
 
 group1Reale.push({
-    id: 5,
-    nome: "remo",
-    email: "remo@example.com",
-    età: 29,
-    attivo: false,
+  id: 5,
+  nome: "remo",
+  email: "remo@example.com",
+  età: 29,
+  attivo: false,
 })
 const group1Json2 = JSON.stringify(group1Reale);
 /*-------------------------*/
@@ -176,8 +176,23 @@ const città5 = "roma";
 
 const infoGenerali = `Nome:${nome5} Cognome:${cognome5} Età:${età5} Città:${città5}`
 /*-------------------------*/
-/*  */
+
+/* funzione e template literals */
+function person6() {
+  return `Ciao, sono ${personEx.nome6} ${personEx.cognome6}, sono un ${personEx.professione6} ed ho ${personEx.età6} anni. `
+};
+
+const personEx = {
+  nome6: "Hermes",
+  cognome6: "Leandri",
+  professione6: "cantautore",
+  età6: 27,
+};
+const formatString = person6(personEx);
+console.log(formatString);
+
 /*-------------------------*/
+
 /*  */
 /*-------------------------*/
 /*  */
