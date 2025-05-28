@@ -59,15 +59,16 @@ console.log(numbers2);
 console.log(newNumbers2);
 
 /*-------------------------*/
+
 /* UNIONE DI DUE ARRAY */
 const numbers3 = [0, 1, 2, 3, 4, 5];
 const numbers4 = [6, 7, 8, 9, 10];
-const fullKey = [...numbers3];
+const fullKey = [...numbers3, ...numbers4];
 
-fullKey.push(numbers4);
 console.log(fullKey);
 
 /*-------------------------*/
+
 /* COPIA DI UN OGGETTO CON PROPIETà AGGIUNTIVE */
 const person3 = {
   nome: "franco",
@@ -86,6 +87,15 @@ let [, , ...restanti] = numbers4;
 console.log(p1);
 console.log(p2);
 console.log(restanti);
+/*-------------------------*/
+
+/* Funzione con parametri variabili */
+function sum(...arr){
+    console.log(arr);
+    return arr.reduce((arr, curr) => acc + curr, 0)
+}
+sum(2, 4, 6, 8,);
+
 /*-------------------------*/
 
 /* DESTRUCTURING OGGETTO CON REST OPERATOR */
