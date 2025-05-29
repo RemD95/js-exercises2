@@ -188,7 +188,7 @@ const infoGenerali = `Nome:${nome5} Cognome:${cognome5} Età:${età5} Città:${c
 /*-------------------------*/
 
 /* funzione e template literals */
-function person6() {
+function person6(item) {
   return `Ciao, sono ${personEx.nome6} ${personEx.cognome6}, sono un ${personEx.professione6} ed ho ${personEx.età6} anni. `
 };
 
