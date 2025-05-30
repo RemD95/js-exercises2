@@ -22,7 +22,21 @@ function divisone(num, num2) {
     }
 }
 /*-----------------------------------------------------*/
-/*  */
+
+/* gestione di più tipi di errori */
+function gestioneErrori(input) {
+    try {
+        if (typeof input !== "string") {
+            throw new Error("possono essere inserite solo dati di tipo stringa");
+        }
+    } catch (error) {
+        if (error instanceof TypeError) {
+            console.error("errore di tipo:", error.message);
+        } else {
+            console.error("errore generico:", error.message);
+        }
+    }
+}
 /*-----------------------------------------------------*/
 /*  */
 /*-----------------------------------------------------*/
