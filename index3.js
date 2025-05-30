@@ -37,8 +37,25 @@ function gestioneErrori(input) {
         }
     }
 }
+gestioneErrori();
 /*-----------------------------------------------------*/
-/*  */
+
+/* uso di finally per eseguire codice indipendentemente dal risultato */
+function eseguiOperazione() {
+  try {
+    let risultato = operazioneNonDefinita()
+    console.log("Risultato:", risultato);
+
+  } catch (errore) {
+    console.error("Si è verificato un errore:", errore.message);
+
+  } finally {
+    console.log("Operazione completata, indipendentemente dal risultato.");
+  }
+}
+
+eseguiOperazione();
+
 /*-----------------------------------------------------*/
 /*  */
 /*-----------------------------------------------------*/
