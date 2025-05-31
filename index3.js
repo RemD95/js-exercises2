@@ -65,7 +65,13 @@ function baseCallback(a, b, callback){
 }
 
 /*-----------------------------------------------------*/
-/*  */
+
+/* funzione con callback e passaggio di parametri */
+function baseCallback2(a, b, callback){
+    const somma =a+b ;
+   console.log("risultato:",somma);
+   callback(somma);    
+}
 /*-----------------------------------------------------*/
 /*  */
 /*-----------------------------------------------------*/
