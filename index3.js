@@ -57,7 +57,13 @@ function eseguiOperazione() {
 eseguiOperazione();
 
 /*-----------------------------------------------------*/
-/*  */
+/* funzione di base con callback */
+function baseCallback(a, b, callback){
+    const somma =a+b ;
+   console.log("risultato:",somma);
+   callback();    
+}
+
 /*-----------------------------------------------------*/
 /*  */
 /*-----------------------------------------------------*/
