@@ -42,38 +42,48 @@ gestioneErrori();
 
 /* uso di finally per eseguire codice indipendentemente dal risultato */
 function eseguiOperazione() {
-  try {
-    let risultato = operazioneNonDefinita()
-    console.log("Risultato:", risultato);
+    try {
+        let risultato = operazioneNonDefinita()
+        console.log("Risultato:", risultato);
 
-  } catch (errore) {
-    console.error("Si è verificato un errore:", errore.message);
+    } catch (errore) {
+        console.error("Si è verificato un errore:", errore.message);
 
-  } finally {
-    console.log("Operazione completata, indipendentemente dal risultato.");
-  }
+    } finally {
+        console.log("Operazione completata, indipendentemente dal risultato.");
+    }
 }
 
 eseguiOperazione();
 
 /*-----------------------------------------------------*/
 /* funzione di base con callback */
-function baseCallback(a, b, callback){
-    const somma =a+b ;
-   console.log("risultato:",somma);
-   callback();    
+function baseCallback(a, b, callback) {
+    const somma = a + b;
+    console.log("risultato:", somma);
+    callback();
 }
 
 /*-----------------------------------------------------*/
 
 /* funzione con callback e passaggio di parametri */
-function baseCallback2(a, b, callback){
-    const somma =a+b ;
-   console.log("risultato:",somma);
-   callback(somma);    
+function baseCallback2(a, b, callback) {
+    const somma = a + b;
+    console.log("risultato:", somma);
+    callback(somma);
 }
 /*-----------------------------------------------------*/
-/*  */
+/* callback annidati */
+function somma(a, b, callback) {
+    const somma = a + b;
+    console.log("risultato:", somma);
+    callback(somma);
+}
+function moltiplicazione(numb) {
+    const moltiplicazione = numb * 2;
+    console.log(moltiplicazione);
+}
+somma(2, 4, moltiplicazione);
 /*-----------------------------------------------------*/
 /*  */
 /*-----------------------------------------------------*/
