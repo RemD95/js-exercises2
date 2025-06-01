@@ -89,19 +89,28 @@ somma(2, 4, moltiplicazione);
 
 /* creare una promessa semplice */
 function secondsWait() {
-    return new Promise((resolve) => {
+    let error = true;
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve("OK");
+            if (error) {
+            reject("qualcosa è andato storto!")
+            } else {
+                resolve("OK");
+            }
         }, 2000);
-    });
+    })
 }
 
 secondsWait().then(message => {
     console.log(message);
+}).catch(error => {
+    console.log("ERRORE:", error)
+});
 
-})
 /*-----------------------------------------------------*/
+
 /*  */
+
 /*-----------------------------------------------------*/
 /*  */
 /*-----------------------------------------------------*/
