@@ -173,7 +173,8 @@ function errorProm() {
 
 errorProm()
     .then(value => {
-        console.log("il valore è:", value);
+        const newValue = value * 100;
+        console.log("il valore è:", newValue);
     })
     .catch(errore => {
         console.error("Errore:", errore);
@@ -192,7 +193,7 @@ catchErr()
     })
 /*-----------------------------------------------------*/
 
-/* gestione degli errori con catch */
+/* gestione degli errori con then e catch */
 function thenCatchErr() {
     return new Promise((resolve, reject, booleano) => {
         let booleano
@@ -211,3 +212,27 @@ thenCatchErr()
         console.error(errore);
     });
 /*-----------------------------------------------------*/
+
+/* gestione degli errori in uuna catena di promesse */
+function chainErr() {
+    return new Promise((resolve, reject) => {
+        let casuale = Math.random() * 10;
+        if (casuale >= 2.5) {
+            resolve("ok")
+        } else {
+            reject("no")
+        }
+    })
+}
+chainErr()
+    .then(val => {
+        console.log(val);
+        return val
+    })
+    .catch(errore => {
+        console.error(errore);
+    })
+    .then(againV => {
+        const idk = againV * 2;
+        console.log(idk);
+    })
