@@ -181,7 +181,7 @@ errorProm()
 /*-----------------------------------------------------*/
 
 /* gestione degli errori con catch */
-function catchErr(params) {
+function catchErr() {
     return new Promise((reject) => {
         reject("ERRORE")
     })
@@ -190,4 +190,24 @@ catchErr()
     .catch(errore => {
         console.error("Riprovare:", errore);
     })
+/*-----------------------------------------------------*/
+
+/* gestione degli errori con catch */
+function thenCatchErr() {
+    return new Promise((resolve, reject, booleano) => {
+        let booleano
+        if (booleano = true) {
+            resolve("ON")
+        } else {
+            reject("OFF")
+        }
+    })
+}
+thenCatchErr()
+    .then(bool => {
+        console.log(bool);
+    })
+    .catch(errore => {
+        console.error(errore);
+    });
 /*-----------------------------------------------------*/
