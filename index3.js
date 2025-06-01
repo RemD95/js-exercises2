@@ -129,14 +129,14 @@ function chainProm() {
 }
 
 chainProm()
-.then(perDue => {
-    const risultato1 = perDue * 2
-    console.log("numero moltiplicato per due:" + risultato1);
-    return risultato1;s
-}).then(piùTre => {
-    const risultato2 = piùTre + 3
-    console.log("risultato finale:" + risultato2);
-});
+    .then(perDue => {
+        const risultato1 = perDue * 2
+        console.log("numero moltiplicato per due:" + risultato1);
+        return risultato1; s
+    }).then(piùTre => {
+        const risultato2 = piùTre + 3
+        console.log("risultato finale:" + risultato2);
+    });
 /*-----------------------------------------------------*/
 /* catena di promesse con condizioni */
 function chainProm2() {
@@ -148,13 +148,34 @@ function chainProm2() {
 }
 
 chainProm2()
-.then(numm => {
-    if(numm / 2 === 0) {
-        console.log("numero pari");
-        return numm
-    }
-}).then(numm => {
-    if(numm / 2 !== 0)
-    console.log("numero dispari");    
-})
+    .then(numm => {
+        if (numm / 2 === 0) {
+            console.log("numero pari");
+            return numm
+        }
+    }).then(numm => {
+        if (numm / 2 !== 0)
+            console.log("numero dispari");
+    })
+/*-----------------------------------------------------*/
+
+/* catena di promesse con gestione di errori */
+function errorProm() {
+    return new Promise((resolve, reject) => {
+        let valoreCasuale = Math.random() * 10;
+        if (valoreCasuale >= 5) {
+            resolve(valoreCasuale)
+        } else {
+            reject("valore troppo basso")
+        }
+    })
+}
+
+errorProm()
+    .then(value => {
+        console.log("il valore è:", value);
+    })
+    .catch(errore => {
+        console.log("Errore:", errore);
+    });
 /*-----------------------------------------------------*/
