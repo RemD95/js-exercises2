@@ -118,7 +118,24 @@ secondsWait().then(message => {
 /* promessa con finally */
 // modificato ex precedente
 /*-----------------------------------------------------*/
-/*  */
+
+/* catena di promesse semplici */
+function chainProm() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(2)
+        }, 1000)
+    })
+}
+
+chainProm().then(perDue => {
+    const risultato1 = perDue * 2
+    console.log("numero moltiplicato per due:" + risultato1);
+    return risultato1;s
+}).then(piùTre => {
+    const risultato2 = piùTre + 3
+    console.log("risultato finale:" + risultato2);
+});
 /*-----------------------------------------------------*/
 /*  */
 /*-----------------------------------------------------*/
