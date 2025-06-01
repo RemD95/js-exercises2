@@ -176,6 +176,18 @@ errorProm()
         console.log("il valore è:", value);
     })
     .catch(errore => {
-        console.log("Errore:", errore);
+        console.error("Errore:", errore);
     });
+/*-----------------------------------------------------*/
+
+/* gestione degli errori con catch */
+function catchErr(params) {
+    return new Promise((reject) => {
+        reject("ERRORE")
+    })
+}
+catchErr()
+    .catch(errore => {
+        console.error("Riprovare:", errore);
+    })
 /*-----------------------------------------------------*/
