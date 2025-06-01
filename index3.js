@@ -93,7 +93,7 @@ function secondsWait() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (error) {
-            reject("qualcosa è andato storto!")
+                reject("qualcosa è andato storto!")
             } else {
                 resolve("OK");
             }
@@ -103,16 +103,20 @@ function secondsWait() {
 
 secondsWait().then(message => {
     console.log(message);
-}).catch(error => {
-    console.log("ERRORE:", error)
-});
+})
+    .catch(error => {
+        console.error("ERRORE:", error)
+    }).finally(() => {
+        console.log("oprezione conclusa ");
+    })
 
 /*-----------------------------------------------------*/
 
-/*  */
-
+/* gestione di una promessa con catch */
+// modificato ex precedente
 /*-----------------------------------------------------*/
-/*  */
+/* promessa con finally */
+// modificato ex precedente
 /*-----------------------------------------------------*/
 /*  */
 /*-----------------------------------------------------*/
