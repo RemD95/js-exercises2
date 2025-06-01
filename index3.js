@@ -128,7 +128,8 @@ function chainProm() {
     })
 }
 
-chainProm().then(perDue => {
+chainProm()
+.then(perDue => {
     const risultato1 = perDue * 2
     console.log("numero moltiplicato per due:" + risultato1);
     return risultato1;s
@@ -137,5 +138,23 @@ chainProm().then(perDue => {
     console.log("risultato finale:" + risultato2);
 });
 /*-----------------------------------------------------*/
-/*  */
+/* catena di promesse con condizioni */
+function chainProm2() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(5)
+        }, 1000)
+    })
+}
+
+chainProm2()
+.then(numm => {
+    if(numm / 2 === 0) {
+        console.log("numero pari");
+        return numm
+    }
+}).then(numm => {
+    if(numm / 2 !== 0)
+    console.log("numero dispari");    
+})
 /*-----------------------------------------------------*/
