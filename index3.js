@@ -73,6 +73,7 @@ function baseCallback2(a, b, callback) {
     callback(somma);
 }
 /*-----------------------------------------------------*/
+
 /* callback annidati */
 function somma(a, b, callback) {
     const somma = a + b;
@@ -85,7 +86,20 @@ function moltiplicazione(numb) {
 }
 somma(2, 4, moltiplicazione);
 /*-----------------------------------------------------*/
-/*  */
+
+/* creare una promessa semplice */
+function secondsWait() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("OK");
+        }, 2000);
+    });
+}
+
+secondsWait().then(message => {
+    console.log(message);
+
+})
 /*-----------------------------------------------------*/
 /*  */
 /*-----------------------------------------------------*/
