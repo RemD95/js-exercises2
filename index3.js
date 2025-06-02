@@ -243,14 +243,14 @@ function promise1() {
     new Promise((resolve) => {
         setTimeout(() => {
             resolve("promise1 risolta")
-        })
+        }, 2000)
     })
 }
 function promise2() {
     new Promise((resolve) => {
         setTimeout(() => {
             resolve("promise2 risolta")
-        })
+        }, 1000)
     })
 }
 
@@ -260,6 +260,31 @@ Promise.all({
 })
     .then(lista => {
         console.log(lista);
+    })
+/*-----------------------------------------------------*/
+
+/* utilizzare promise.race */
+function promise3() {
+    new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("promise3 risolta")
+        }, 4000)
+    })
+}
+function promise4() {
+    new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("promise4 risolta")
+        }, 5000)
+    })
+}
+
+Promise.race({
+    promise3,
+    promise4
+})
+    .then(lista2 => {
+        console.log(lista2);
     })
 /*-----------------------------------------------------*/
 
