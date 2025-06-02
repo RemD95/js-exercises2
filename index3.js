@@ -313,4 +313,18 @@ Promise.allSettled({
         console.log(lista3);
     })
 /*-----------------------------------------------------*/
+/* funzione asincrona semplice */
+function promessa1() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("risolto")
+        }, 2000)
+    })
+}
+async function prom() {
+    const attesa = await promessa1;
+    console.log(attesa);
+}
+
+
 
