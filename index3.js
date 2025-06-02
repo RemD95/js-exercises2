@@ -288,3 +288,29 @@ Promise.race({
     })
 /*-----------------------------------------------------*/
 
+/* utilizzare promise.allSettled */
+function promise5() {
+    new Promise((resolve, reject) => {
+        resolve("promise resolved")
+    })
+}
+function promise6() {
+    new Promise((resolve, reject) => {
+        resolve("promise resolved")
+    })
+}
+function promise7() {
+    new Promise((resolve, reject) => {
+        reject("promise rejected")
+    })
+}
+Promise.allSettled({
+    promise5,
+    promise6,
+    promise7
+})
+    .then(lista3 => {
+        console.log(lista3);
+    })
+/*-----------------------------------------------------*/
+
