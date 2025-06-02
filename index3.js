@@ -236,3 +236,30 @@ chainErr()
         const idk = againV * 2;
         console.log(idk);
     })
+/*-----------------------------------------------------*/
+
+/* utilizzare promise.all */
+function promise1() {
+    new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("promise1 risolta")
+        })
+    })
+}
+function promise2() {
+    new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("promise2 risolta")
+        })
+    })
+}
+
+Promise.all({
+    promise1,
+    promise2
+})
+    .then(lista => {
+        console.log(lista);
+    })
+/*-----------------------------------------------------*/
+
