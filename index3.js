@@ -325,6 +325,45 @@ async function prom() {
     const attesa = await promessa1;
     console.log(attesa);
 }
+/*-----------------------------------------------------*/
 
+/* gestione degli errori con try and catch */
 
+try {
+    async function promessa2() {
+        return new Promise((resolve, reject) => {
+            let bool1 = true
+            if (bool1 = true) {
+                resolve("true")
+            } else {
+                reject("false")
+            }
+        })
+    }
+} catch (error) {
+    console.error("Valore non valido:", error);
+}
+/*-----------------------------------------------------*/
+async function series() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("series risolta")
+        }, 3000)
+    })
+}
+async function series2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("series2 risolta")
+        }, 6000)
+    })
 
+}
+async function series3() {
+    const sries3Wait = await Promise.all({
+        series,
+        series2
+    })
+    console.log(sries3Wait);
+}
+/*-----------------------------------------------------*/
