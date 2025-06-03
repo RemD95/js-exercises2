@@ -194,10 +194,9 @@ catchErr()
 /*-----------------------------------------------------*/
 
 /* gestione degli errori con then e catch */
-function thenCatchErr() {
-    return new Promise((resolve, reject, booleano) => {
-        let booleano
-        if (booleano = true) {
+function thenCatchErr(booleano) {
+    return new Promise((resolve, reject) => {
+        if (booleano === true) {
             resolve("ON")
         } else {
             reject("OFF")
@@ -344,6 +343,8 @@ try {
     console.error("Valore non valido:", error);
 }
 /*-----------------------------------------------------*/
+
+/* funzioni asincrone in serie */
 async function series() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
