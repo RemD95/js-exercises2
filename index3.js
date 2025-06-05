@@ -393,7 +393,20 @@ richiestaGet()
 /*-----------------------------------------------------*/
 
 /* eseguire una richiesta post */
+let utente = {
+    nome: "Remo",
+    cognome: "Blaj"
+}
+let response = await fetch('https://jsonplaceholder.typicode.com/users', {
+    method: `POST`,
+    headers: {
+        'Content-Type': 'apllicatione/json;charset-utf-8'
+    },
+    body: JSON.stringify(utente)
+});
 
+let result = await response.json();
+console.log(result);
 /*-----------------------------------------------------*/
 
 /* gestione degli errori con async ed await */
