@@ -379,3 +379,17 @@ async function resolvePromises() {
 }
 resolvePromises();
 /*-----------------------------------------------------*/
+
+/* eseguire una richiesta get semplice */
+
+function richiestaGet() {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error)
+        )
+}
+richiestaGet()
+/*-----------------------------------------------------*/
+
+/*  */
