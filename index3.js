@@ -392,4 +392,25 @@ function richiestaGet() {
 richiestaGet()
 /*-----------------------------------------------------*/
 
+/* eseguire una richiesta post */
+
+/*-----------------------------------------------------*/
+
+/* gestione degli errori con async ed await */
+async function getData() {
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/todos")
+        const data = await response.json()
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+getdata()
+/*-----------------------------------------------------*/
+
+/* comprendere un errore cors  */
+/*-----------------------------------------------------*/
+
 /*  */
+/*-----------------------------------------------------*/
