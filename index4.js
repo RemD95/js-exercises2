@@ -50,11 +50,25 @@ elemButton.addEventListener("click", function () {
                                                         */
 /*-----------------------------------------------------*/
 
-/*  */
+/* utilizzare  localStorage e sessionStorage insieme */
 
+const localSet = localStorage.setItem("User L", "giovanni");
+const sessionSet = sessionStorage.setItem("User S", "giacomo");
+console.log("Valore salvato in local:", localSet);
+console.log("Valore salvato in session:", sessionSet);
 
+const localGet = localStorage.getItem("User L", "giovanni");
+const sessionGet = sessionStorage.getItem("User S", "giacomo");
+console.log("Valore recuperato in local:", localGet);
+console.log("Valore recuperato in session:", sessionGet);
+
+const localRemove = localStorage.removeItem("User L", "giovanni");
+const sessionRemove = sessionStorage.removeItem("User S", "giacomo");
+console.log("Valore rimosso in local:", localRemove);
+console.log("Valore rimosso in session:", sessionRemove);
 
 /*-----------------------------------------------------*/
+
 /*  */
 /*-----------------------------------------------------*/
 /*  */
