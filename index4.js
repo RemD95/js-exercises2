@@ -73,9 +73,13 @@ console.log("Valore rimosso in session:", sessionRemove);
 console.log("Questo è il mio DOM:", document);
 
 /*-----------------------------------------------------*/
-/*  */
+
+/* getElementById */
+const elementById = document.getElementById("button")
 /*-----------------------------------------------------*/
-/*  */
+
+/* querySelector */
+const querySelector = document.querySelector("#Lorem");
 /*-----------------------------------------------------*/
 /*  */
 /*-----------------------------------------------------*/
