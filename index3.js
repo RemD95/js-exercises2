@@ -423,6 +423,8 @@ getdata()
 /*-----------------------------------------------------*/
 
 /* comprendere un errore cors  */
+const API_URL = fetch('http://example.com');
+console.log(API_URL);
 /*-----------------------------------------------------*/
 
 /*  */
