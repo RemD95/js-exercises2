@@ -104,12 +104,17 @@ idkP.innerHTML = "<button>Click Here</button>";
 
 /* crea una lista */
 
-let ul = document.createElement('ul');
-ul.innerHTML = "<ul></ul>"
+let ulist = document.createElement('ul');
+ulist.id = "lista"
+ulist.innerHTML = "<ul></ul>"
 
 /*-----------------------------------------------------*/
 
-/*  */
+/* crea i list items */
+
+let lista = document.querySelector("#lista");
+let listItems = document.createElement(`li`+`li`+`li`+`li`+`li`);
+
 /*-----------------------------------------------------*/
 
 /*  */
