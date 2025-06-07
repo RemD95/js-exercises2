@@ -102,7 +102,11 @@ font-size: 22px;
 idkP.innerHTML = "<button>Click Here</button>";
 /*-----------------------------------------------------*/
 
-/*  */
+/* crea una lista */
+
+let ul = document.createElement('ul');
+ul.innerHTML = "<ul></ul>"
+
 /*-----------------------------------------------------*/
 
 /*  */
