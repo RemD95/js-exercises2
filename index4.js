@@ -89,7 +89,13 @@ idkP.innerText = "THIS IS THE TEXT TYPED THROUGH JS!!!"
 
 /*-----------------------------------------------------*/
 
-/*  */
+/* cambia lo stile */
+
+idkP.style.cssText = `
+background-color: red;
+font-size: 22px;
+`;
+
 /*-----------------------------------------------------*/
 
 /*  */
